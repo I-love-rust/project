@@ -25,7 +25,7 @@ paths:
         default:
           description: Keyword and URLs added successfully
           
-  /urls:
+  /urls/{tag}:
     get:
       summary: get urls of tag
       description: route for gettings urls by tag.
