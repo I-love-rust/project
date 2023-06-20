@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Project
+
+paths:
+  /keywords:
+    post:
+      summary: create tag
+      description: route for creating tag.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                keyword:
+                  type: string
+                  example: "hello"
+                urls:
+                  type: array
+                  example: ["https://datatracker.ietf.org/doc/html/rfc6455", "https://cdn.discordapp.com/attachments/842807544359026719/1120655770099384370/LICENSE1.txt", "https://wikipedia.com", "https://ru.wikipedia.org/wiki/Arch_Linux"]
+              
+        required: true
+      responses:
+        default:
+          description: Keyword and URLs added successfully
+          
+  /urls:
+    get:
+      summary: get urls of tag
+      description: route for gettings urls by tag.
+      responses:
+        default:
+          description: Keyword and URLs added successfully
